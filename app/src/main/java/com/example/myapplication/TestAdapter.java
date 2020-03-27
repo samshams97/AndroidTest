@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
-public class TestAdapter extends RecyclerView.Adapter<TestHolder> {
+public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestHolder> {
 
     ArrayList<ModelClass> listModel;
     TestAdapter (ArrayList<ModelClass>list){
@@ -39,14 +39,19 @@ public class TestAdapter extends RecyclerView.Adapter<TestHolder> {
     public int getItemCount() {
         return listModel.size();
     }
-}
- class TestHolder extends RecyclerView.ViewHolder{
-    TextView  title;
-    ImageView img;
 
-    public TestHolder(@NonNull View itemView) {
-        super(itemView);
-        title = itemView.findViewById(R.id.txtTile);
-        img = itemView.findViewById(R.id.imgMe);
+    public class TestHolder extends RecyclerView.ViewHolder {
+
+        TextView  title;
+        ImageView img;
+
+        public TestHolder(@NonNull View itemView) {
+            super(itemView);
+            title = itemView.findViewById(R.id.txtTile);
+            img = itemView.findViewById(R.id.imgMe);
     }
 }
+
+
+    }
+
