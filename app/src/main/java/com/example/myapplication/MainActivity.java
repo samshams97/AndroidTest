@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<ModelClass> folder = new ArrayList<>();
         folder.add(new ModelClass("gone girl",R.drawable.ic_launcher_background));
         folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
+        folder.add(new ModelClass("furyddddddd",R.drawable.ic_launcher_background));
         folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
         folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
         folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
