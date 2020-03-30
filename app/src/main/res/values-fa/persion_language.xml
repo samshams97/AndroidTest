@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="show_toast">توست کلیک شد</string>
+    <string name="btn_save">ذخیره</string>
+    <string name="btn_name">لطفا نام خود را وارد کنید</string>
+    <string name="btn_family">لطفا نام خانوادگی خود را وارد کنید</string>
+    <string name="btn_phone">لطفا تلفن خود را وارد کنید</string>
+    <string name="btn_intent">برو به صفحه دیگر </string>
+    <string name="btn_click">دکمه کلیک شد</string>
+    <string name="app_name">آموزش اندروید</string>
+
+
+
+
+
+
+</resources>

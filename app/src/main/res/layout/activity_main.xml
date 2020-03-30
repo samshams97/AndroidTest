@@ -15,6 +15,17 @@
         android:layout_margin="8dp"
         android:background="@color/colorAccent" />
 
+    <EditText
+        android:id="@+id/edtGson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:hint="please enter your movie"
+        android:background="#FFEB3B" />
+
+
+
     <Button
         android:id="@+id/btnToast"
         android:layout_width="wrap_content"
@@ -33,10 +44,24 @@
         android:background="#00FFCC"
         android:text="implicit intent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/recycler"/>
+        android:text="@string/btn_intent"
+        android:textSize="@dimen/large_font"
+        android:layout_margin="@dimen/medium_margin"
+        android:layout_gravity="center"
+        android:id="@+id/btnGson"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sharePreference"
+        android:id="@+id/btnPreference"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/medium_margin"/>
+
+
 
 
 </LinearLayout>

@@ -9,14 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.movie.com.example.myapplication.Search;
+
 import java.util.ArrayList;
-import java.util.zip.Inflater;
+import java.util.List;
 
 public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestHolder> {
 
-    ArrayList<ModelClass> listModel;
-    TestAdapter (ArrayList<ModelClass>list){
-        listModel= list;
+    List<Search>listttt;
+    TestAdapter (List<Search>list){
+        listttt= list;
     }
     @NonNull
     @Override
@@ -29,15 +31,14 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TestHolder holder, int position) {
-        ModelClass modelClass = listModel.get(position);
-        holder.title.setText(modelClass.getName());
-        holder.img.setImageResource(modelClass.getPic());
+        Search search = listttt.get(position);
+        holder.title.setText(search.getTitle());
 
     }
 
     @Override
     public int getItemCount() {
-        return listModel.size();
+        return listttt.size();
     }
 
     public class TestHolder extends RecyclerView.ViewHolder {
@@ -48,7 +49,7 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestHolder> {
         public TestHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.txtTile);
-            img = itemView.findViewById(R.id.imgMe);
+
     }
 }
 

@@ -6,4 +6,11 @@
     <dimen name="small_font">8sp</dimen>
     <dimen name="medium_font">12sp</dimen>
     <dimen name="large_font">16sp</dimen>
+    <string name="btn_click">Button clicked</string>
+    <string name="show_toast">this is a toast</string>
+    <string name="btn_save">save</string>
+    <string name="btn_name">please enter your name</string>
+    <string name="btn_family">please enter your family</string>
+    <string name="btn_phone">please enter your phone number</string>
+    <string name="btn_intent">go to another activity</string>
 </resources>

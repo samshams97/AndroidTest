@@ -23,24 +23,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button btnPreference =  findViewById(R.id.btnPreference);
 
-        ArrayList<ModelClass> folder = new ArrayList<>();
-        folder.add(new ModelClass("gone girl",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("furyddddddd",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
-        folder.add(new ModelClass("fury",R.drawable.ic_launcher_background));
+        Button btnGson = findViewById(R.id.btnGson);
+        final EditText edtGson = findViewById(R.id.edtGson);
 
-        RecyclerView recyclerView = findViewById(R.id.recycler);
-        TestAdapter adapter = new TestAdapter(folder);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this,RecyclerView.VERTICAL,false));
 
         final EditText edtIntent = findViewById(R.id.edtIntent);
         Button btnToast = findViewById(R.id.btnToast);
@@ -65,6 +52,26 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        btnGson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String movieName = edtGson.getText().toString();
+                Intent intent = new Intent(MainActivity.this,GsonActivity.class);
+                intent.putExtra("Movie",movieName);
+                startActivity(intent);
+            }
+        });
+
+        btnPreference.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SharePreference.class);
+                startActivity(intent);
+            }
+        });
+
+
+
 
 
 
