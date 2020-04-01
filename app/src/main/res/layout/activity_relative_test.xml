@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RelativeTest">
+
+    <ImageView
+        android:id="@+id/imgMain"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/androidlogo" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="information"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/large_font"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:id="@+id/txtInfo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="InfoLeft"
+            android:textSize="@dimen/large_font"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:layout_marginTop="@dimen/medium_margin"/>
+
+
+
+
+
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="change profile"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_alignRight="@+id/imgMain"
+        android:layout_alignBottom="@+id/imgMain"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change name"
+        android:layout_alignRight="@+id/imgMain"
+        android:layout_above="@+id/btnProfile"
+        android:layout_marginRight="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save"
+        android:layout_alignBottom="@+id/imgMain"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,15 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.R;
 import com.example.myapplication.movie.com.example.myapplication.Search;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TestAdapter extends RecyclerView.Adapter<TestAdapter.TestHolder> {
 
     List<Search>listttt;
-    TestAdapter (List<Search>list){
+    public TestAdapter(List<Search> list){
         listttt= list;
     }
     @NonNull

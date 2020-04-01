@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SharePreference"></activity>
-        <activity android:name=".GsonActivity" />
-        <activity android:name=".IntentActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.RelativeTest" />
+        <activity android:name=".activities.SharePreference" />
+        <activity android:name=".activities.GsonActivity" />
+        <activity android:name=".activities.IntentActivity" />
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

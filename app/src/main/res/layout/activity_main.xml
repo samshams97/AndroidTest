@@ -1,67 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="320dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/edtIntent"
+    android:id="@+id/drawer"
+    tools:context=".activities.MainActivity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:background="@color/colorAccent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edtIntent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@color/colorAccent" />
 
-    <EditText
-        android:id="@+id/edtGson"
+        <EditText
+            android:id="@+id/edtGson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:hint="please enter your movie"
+            android:background="#FFEB3B" />
+
+
+
+        <Button
+            android:id="@+id/btnToast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="click" />
+
+        <Button
+            android:id="@+id/imIntent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:background="#00FFCC"
+            android:text="implicit intent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_intent"
+            android:textSize="@dimen/large_font"
+            android:layout_margin="@dimen/medium_margin"
+            android:layout_gravity="center"
+            android:id="@+id/btnGson"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sharePreference"
+            android:id="@+id/btnPreference"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/medium_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:hint="please enter your movie"
-        android:background="#FFEB3B" />
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#CDDC39"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:src="@drawable/iconfotbal"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:id="@+id/imgProfile"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_save"
+                android:layout_alignRight="@+id/imgProfile"
+                android:background="#ff01ff"
+                android:layout_marginRight="@dimen/large_margin"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:layout_alignBottom="@+id/imgProfile"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:layout_marginBottom="@dimen/large_margin"
+                android:layout_marginLeft="@dimen/large_margin"
+                android:background="#8BC34A"
+                android:layout_alignBottom="@+id/imgProfile"
+                />
+
+
+        </RelativeLayout>
 
 
 
-    <Button
-        android:id="@+id/btnToast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:gravity="center"
-        android:text="click" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="@dimen/large_font"
+            android:id="@+id/txtProfile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/large_margin"
+            />
 
-    <Button
-        android:id="@+id/imIntent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="8dp"
-        android:background="#00FFCC"
-        android:text="implicit intent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Information"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/large_font"
+            android:id="@+id/txtInformation"
+            />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_intent"
-        android:textSize="@dimen/large_font"
-        android:layout_margin="@dimen/medium_margin"
-        android:layout_gravity="center"
-        android:id="@+id/btnGson"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sharePreference"
-        android:id="@+id/btnPreference"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/medium_margin"/>
+    </LinearLayout>
 
 
 
 
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
